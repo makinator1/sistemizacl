@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistemiza · Soluciones para tu negocio</title>
+  <meta name="description" content="Sistemiza: desarrollo de sistemas, servicios informáticos para pymes y automatización de procesos. Sitios web, tiendas en línea, integración con ERP y más.">
+  <meta name="theme-color" content="#1B1A4B">
+  <link rel="canonical" href="https://www.sistemiza.cl/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:title" content="Sistemiza · Soluciones para tu negocio">
+  <meta property="og:description" content="Desarrollo de sistemas, servicios informáticos para pymes y automatización de procesos.">
+  <meta property="og:url" content="https://www.sistemiza.cl/">
+  <meta property="og:image" content="https://www.sistemiza.cl/assets/img/sistemiza-lema-fondo-oscuro.png">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/sora-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Aplica el tema antes de pintar la página para evitar parpadeos -->
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      try { t = localStorage.getItem('sistemiza-tema'); } catch (e) {}
+      if (t !== 'claro' && t !== 'oscuro') {
+        t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro';
+      }
+      d.setAttribute('data-tema', t);
+      d.classList.add('js');
+    })();
+  </script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ======================= Cabecera ======================= -->
+  <header class="cabecera" id="cabecera">
+    <div class="contenedor cabecera__fila">
+      <a class="marca" href="#inicio" aria-label="Sistemiza, ir al inicio">
+        <img class="logo logo--claro" src="assets/img/sistemiza-color.svg" alt="Sistemiza" width="149" height="44">
+        <img class="logo logo--oscuro" src="assets/img/sistemiza-blanco.svg" alt="" width="149" height="44" aria-hidden="true">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#productos">Productos web</a>
+        <a href="#complementos">Complementos</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a class="boton boton--chico nav__cta" href="#contacto">Conversemos</a>
+      </nav>
+
+      <div class="cabecera__acciones">
+        <button class="icono-boton" id="btn-tema" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar tema">
+          <svg class="ico ico-luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg class="ico ico-sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+        </button>
+        <button class="icono-boton menu-boton" id="btn-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ======================= Inicio ======================= -->
+    <section class="hero" id="inicio">
+      <div class="hero__fondo" aria-hidden="true"><span></span><span></span></div>
+      <div class="contenedor hero__grilla">
+        <div class="hero__texto">
+          <p class="etiqueta aparecer">Soluciones para tu negocio</p>
+          <h1 class="aparecer" style="--d:.08s">Sistemas, soporte y automatización para tu <span class="degradado">pyme</span></h1>
+          <p class="bajada aparecer" style="--d:.16s">Desarrollamos sistemas a medida, nos hacemos cargo de la informática de tu empresa y automatizamos tus procesos para que dediques tu tiempo a lo que importa: tu negocio.</p>
+          <div class="hero__botones aparecer" style="--d:.24s">
+            <a class="boton" href="#contacto">Conversemos
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="boton boton--borde" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+
+        <!-- Las tres capas del logo, una por línea de servicio -->
+        <div class="capas" aria-hidden="true">
+          <div class="capa capa--1"><div class="capa__in">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6l1-7Z"/></svg>
+            <span>Automatización</span>
+          </div></div>
+          <div class="capa capa--2"><div class="capa__in">
+            <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+            <span>Servicios informáticos</span>
+          </div></div>
+          <div class="capa capa--3"><div class="capa__in">
+            <svg class="ico" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
+            <span>Desarrollo de sistemas</span>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Servicios ======================= -->
+    <section class="seccion" id="servicios">
+      <div class="contenedor">
+        <header class="seccion__cab aparecer">
+          <p class="etiqueta">Qué hacemos</p>
+          <h2>Tecnología al servicio de tu empresa</h2>
+          <p class="bajada">Tres líneas de trabajo que se complementan, para que tu negocio funcione ordenado y sin tareas repetitivas.</p>
+        </header>
+
+        <div class="grilla grilla--3">
+          <article class="tarjeta tarjeta--servicio aparecer">
+            <div class="tarjeta__icono"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></div>
+            <h3>Desarrollo de sistemas</h3>
+            <p>Construimos el software que tu operación necesita, desde un sitio web hasta una plataforma integrada con tu ERP.</p>
+            <ul class="lista">
+              <li>Sitios web y tiendas en línea</li>
+              <li>Sistemas y paneles de gestión a medida</li>
+              <li>Integración con ERP, pasarelas de pago y facturación electrónica</li>
+            </ul>
+          </article>
+
+          <article class="tarjeta tarjeta--servicio aparecer" style="--d:.1s">
+            <div class="tarjeta__icono"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+            <h3>Servicios informáticos para pymes</h3>
+            <p>Nos ocupamos de la base tecnológica de tu empresa, con un trato cercano y en un lenguaje simple.</p>
+            <ul class="lista">
+              <li>Dominio, hosting y correo corporativo</li>
+              <li>Mantención, respaldos y seguridad</li>
+              <li>Soporte y capacitación para tu equipo</li>
+            </ul>
+          </article>
+
+          <article class="tarjeta tarjeta--servicio aparecer" style="--d:.2s">
+            <div class="tarjeta__icono"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6l1-7Z"/></svg></div>
+            <h3>Automatización de procesos</h3>
+            <p>Conectamos tus herramientas para que el trabajo repetitivo se haga solo, sin errores y a cualquier hora.</p>
+            <ul class="lista">
+              <li>Flujos automáticos con herramientas como n8n</li>
+              <li>Avisos, correos y reportes sin intervención manual</li>
+              <li>Sincronización de pedidos, stock y documentos</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Productos web (niveles) ======================= -->
+    <section class="seccion seccion--alt" id="productos">
+      <div class="contenedor">
+        <header class="seccion__cab aparecer">
+          <p class="etiqueta">Productos web</p>
+          <h2>De la vitrina a la automatización</h2>
+          <p class="bajada">Siete niveles de sitio web para tu negocio. Cada nivel suma funciones y requiere más capacidad de cómputo: partes por el que necesitas hoy y creces cuando quieras.</p>
+        </header>
+
+        <div class="niveles aparecer">
+          <div class="niveles__tabs" role="tablist" aria-label="Niveles de sitio web">
+            <button role="tab" id="tab-1" aria-controls="nivel-1" aria-selected="true"><b>1</b><span>Landing informativa</span></button>
+            <button role="tab" id="tab-2" aria-controls="nivel-2" aria-selected="false" tabindex="-1"><b>2</b><span>Landing + WhatsApp</span></button>
+            <button role="tab" id="tab-3" aria-controls="nivel-3" aria-selected="false" tabindex="-1"><b>3</b><span>Catálogo + WhatsApp</span></button>
+            <button role="tab" id="tab-4" aria-controls="nivel-4" aria-selected="false" tabindex="-1"><b>4</b><span>Tienda + correo</span></button>
+            <button role="tab" id="tab-5" aria-controls="nivel-5" aria-selected="false" tabindex="-1"><b>5</b><span>Tienda + panel</span></button>
+            <button role="tab" id="tab-6" aria-controls="nivel-6" aria-selected="false" tabindex="-1"><b>6</b><span>Tienda automática</span></button>
+            <button role="tab" id="tab-7" aria-controls="nivel-7" aria-selected="false" tabindex="-1"><b>7</b><span>Integración ERP</span></button>
+          </div>
+
+          <article class="nivel" id="nivel-1" role="tabpanel" aria-labelledby="tab-1">
+            <div class="nivel__info">
+              <p class="etiqueta">Nivel 1</p>
+              <h3>Landing page informativa</h3>
+              <p class="nivel__desc">Una sola página que presenta tu negocio: quién eres, qué ofreces y cómo contactarte.</p>
+              <ul class="lista">
+                <li>Diseño adaptable a celular, tablet y computador</li>
+                <li>Secciones: inicio, servicios, galería y datos de contacto</li>
+                <li>Mapa de ubicación y enlaces a redes sociales</li>
+                <li>Dominio propio y certificado de seguridad (https)</li>
+              </ul>
+              <p class="ideal"><strong>Ideal para:</strong> dar presencia y credibilidad en internet.</p>
+            </div>
+            <aside class="computo">
+              <p class="etiqueta">Capacidad de cómputo</p>
+              <div class="medidor" data-nivel="1"></div>
+              <p class="computo__valor">1 de 5</p>
+              <p class="nota">Archivos estáticos (HTML, CSS, JS) en hosting estático o CDN. Sin servidor de aplicación ni base de datos.</p>
+            </aside>
+          </article>
+
+          <article class="nivel" id="nivel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+            <div class="nivel__info">
+              <p class="etiqueta">Nivel 2</p>
+              <h3>Landing page + botón de WhatsApp</h3>
+              <p class="nivel__desc">La landing suma un botón flotante que abre un chat directo con tu negocio, con un mensaje ya escrito.</p>
+              <ul class="lista">
+                <li>Todo lo del Nivel 1</li>
+                <li>Botón flotante de WhatsApp en todo el sitio</li>
+                <li>Mensaje prellenado según el servicio consultado</li>
+                <li>Formulario de contacto opcional (servicio externo)</li>
+              </ul>
+              <p class="ideal"><strong>Ideal para:</strong> servicios que se cierran conversando.</p>
+            </div>
+            <aside class="computo">
+              <p class="etiqueta">Capacidad de cómputo</p>
+              <div class="medidor" data-nivel="1"></div>
+              <p class="computo__valor">1 de 5</p>
+              <p class="nota">Igual que el Nivel 1: el botón es un enlace a WhatsApp, sin procesamiento propio en el servidor.</p>
+            </aside>
+          </article>
+
+          <article class="nivel" id="nivel-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+            <div class="nivel__info">
+              <p class="etiqueta">Nivel 3</p>
+              <h3>Catálogo y pedidos por WhatsApp</h3>
+              <p class="nivel__desc">Muestras tus productos con precios y el cliente arma su pedido; el carrito se envía como mensaje de WhatsApp.</p>
+              <ul class="lista">
+                <li>Todo lo del Nivel 2</li>
+                <li>Catálogo con fotos, precios y categorías</li>
+                <li>Carrito simple que genera el pedido en un mensaje</li>
+                <li>Tú confirmas stock, pago y despacho por el chat</li>
+              </ul>
+              <p class="ideal"><strong>Ideal para:</strong> pocos productos y pedidos manejables a mano.</p>
+            </div>
+            <aside class="computo">
+              <p class="etiqueta">Capacidad de cómputo</p>
+              <div class="medidor" data-nivel="2"></div>
+              <p class="computo__valor">2 de 5</p>
+              <p class="nota">Hosting estático con lógica en el navegador; catálogo en un archivo o CMS liviano. Cómputo bajo, sin cuentas de usuario.</p>
+            </aside>
+          </article>
+
+          <article class="nivel" id="nivel-4" role="tabpanel" aria-labelledby="tab-4" hidden>
+            <div class="nivel__info">
+              <p class="etiqueta">Nivel 4</p>
+              <h3>Tienda con cuentas y pedidos por correo</h3>
+              <p class="nivel__desc">El cliente se registra, inicia sesión y compra en el sitio; cada pedido te llega por correo electrónico.</p>
+              <ul class="lista">
+                <li>Registro e inicio de sesión de clientes</li>
+                <li>Catálogo, carrito y finalización de compra</li>
+                <li>Pedido enviado por correo a ti y al cliente</li>
+                <li>Cobro y facturación manual (sin pasarela de pago)</li>
+              </ul>
+              <p class="ideal"><strong>Ideal para:</strong> negocios que quieren datos de clientes y orden.</p>
+            </div>
+            <aside class="computo">
+              <p class="etiqueta">Capacidad de cómputo</p>
+              <div class="medidor" data-nivel="3"></div>
+              <p class="computo__valor">3 de 5</p>
+              <p class="nota">Servidor web con base de datos (clientes y productos) y envío de correo (SMTP). Hosting compartido o VPS pequeño.</p>
+            </aside>
+          </article>
+
+          <article class="nivel" id="nivel-5" role="tabpanel" aria-labelledby="tab-5" hidden>
+            <div class="nivel__info">
+              <p class="etiqueta">Nivel 5</p>
+              <h3>Tienda con panel de pedidos</h3>
+              <p class="nivel__desc">Los pedidos quedan registrados en el sitio y se gestionan desde un panel de administración, con estados e historial.</p>
+              <ul class="lista">
+                <li>Todo lo del Nivel 4</li>
+                <li>Panel de administración: pedidos, productos y stock</li>
+                <li>Estados del pedido: nuevo, preparando, enviado</li>
+                <li>Historial de compras visible para cada cliente</li>
+                <li>Facturación manual, sin pasarela de pago</li>
+              </ul>
+            </div>
+            <aside class="computo">
+              <p class="etiqueta">Capacidad de cómputo</p>
+              <div class="medidor" data-nivel="4"></div>
+              <p class="computo__valor">4 de 5</p>
+              <p class="nota">Servidor de aplicación y base de datos de pedidos, panel de administración y respaldos automáticos. VPS dedicado al sitio.</p>
+            </aside>
+          </article>
+
+          <article class="nivel" id="nivel-6" role="tabpanel" aria-labelledby="tab-6" hidden>
+            <div class="nivel__info">
+              <p class="etiqueta">Nivel 6</p>
+              <h3>Tienda 100&nbsp;% automatizada</h3>
+              <p class="nivel__desc">Del pago a la factura sin intervención manual: el sitio cobra, registra el pedido, emite el documento y avisa al cliente.</p>
+              <ul class="lista">
+                <li>Pago en línea con pasarela (tarjetas y transferencia)</li>
+                <li>Boleta o factura electrónica emitida automáticamente</li>
+                <li>Control de stock y avisos automáticos por correo</li>
+                <li>Seguimiento de despacho y reportes de ventas</li>
+              </ul>
+              <p class="ideal"><strong>Ideal para:</strong> alto volumen de pedidos sin intervención manual.</p>
+            </div>
+            <aside class="computo">
+              <p class="etiqueta">Capacidad de cómputo</p>
+              <div class="medidor" data-nivel="5"></div>
+              <p class="computo__valor">5 de 5</p>
+              <p class="nota">Servidor robusto o nube con pasarela de pago, API de facturación electrónica, tareas programadas, monitoreo y respaldos.</p>
+            </aside>
+          </article>
+
+          <article class="nivel" id="nivel-7" role="tabpanel" aria-labelledby="tab-7" hidden>
+            <div class="nivel__info">
+              <p class="etiqueta">Nivel 7 <span class="insignia">Nuevo</span></p>
+              <h3>Plataforma integrada con ERP</h3>
+              <p class="nivel__desc">El sitio se conecta con inventario, contabilidad, logística y CRM: toda la operación en un solo sistema.</p>
+              <ul class="lista">
+                <li>Integración con ERP (por ejemplo Odoo) y stock sincronizado</li>
+                <li>Usuarios con roles: ventas, bodega y administración</li>
+                <li>Precios por cliente, cotizaciones y venta a empresas</li>
+                <li>Despachos con couriers y seguimiento automático</li>
+                <li>Reportes, analítica y respaldos avanzados</li>
+              </ul>
+            </div>
+            <aside class="computo">
+              <p class="etiqueta">Capacidad de cómputo</p>
+              <div class="medidor" data-nivel="5"></div>
+              <p class="computo__valor">5 de 5 · escalable</p>
+              <p class="nota">Infraestructura en la nube escalable, base de datos dedicada, APIs, integraciones y monitoreo continuo con soporte.</p>
+            </aside>
+          </article>
+        </div>
+
+        <!-- Comparativa -->
+        <div class="comparativa aparecer">
+          <h3>Qué incluye cada nivel</h3>
+          <div class="tabla-scroll" tabindex="0" role="region" aria-label="Comparativa de niveles">
+            <table>
+              <thead>
+                <tr><th scope="col">Característica</th><th scope="col">Nivel 1</th><th scope="col">Nivel 2</th><th scope="col">Nivel 3</th><th scope="col">Nivel 4</th><th scope="col">Nivel 5</th><th scope="col">Nivel 6</th><th scope="col">Nivel 7</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Landing page informativa</th><td class="si">●</td><td class="si">●</td><td class="si">●</td><td class="si">●</td><td class="si">●</td><td class="si">●</td><td class="si">●</td></tr>
+                <tr><th scope="row">Botón de contacto por WhatsApp</th><td>–</td><td class="si">●</td><td class="si">●</td><td class="si">●</td><td class="si">●</td><td class="si">●</td><td class="si">●</td></tr>
+                <tr><th scope="row">Catálogo de productos</th><td>–</td><td>–</td><td class="si">●</td><td class="si">●</td><td class="si">●</td><td class="si">●</td><td class="si">●</td></tr>
+                <tr><th scope="row">Cuentas de usuario (inicio de sesión)</th><td>–</td><td>–</td><td>–</td><td class="si">●</td><td class="si">●</td><td class="si">●</td><td class="si">●</td></tr>
+                <tr><th scope="row">Canal de pedidos</th><td>–</td><td>–</td><td class="txt">WhatsApp</td><td class="txt">Correo</td><td class="txt">En el sitio</td><td class="txt">En el sitio</td><td class="txt">Integrado</td></tr>
+                <tr><th scope="row">Panel de gestión de pedidos</th><td>–</td><td>–</td><td>–</td><td>–</td><td class="si">●</td><td class="si">●</td><td class="si">●</td></tr>
+                <tr><th scope="row">Pago en línea (pasarela)</th><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td class="si">●</td><td class="si">●</td></tr>
+                <tr><th scope="row">Facturación</th><td>–</td><td>–</td><td class="txt">Manual</td><td class="txt">Manual</td><td class="txt">Manual</td><td class="txt">Automática</td><td class="txt">Automática</td></tr>
+                <tr><th scope="row">Integración con inventario / ERP</th><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td><td class="si">●</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="nota"><span class="si">●</span> incluido &nbsp;·&nbsp; – no incluido</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Complementos ======================= -->
+    <section class="seccion" id="complementos">
+      <div class="contenedor">
+        <header class="seccion__cab aparecer">
+          <p class="etiqueta">Servicios complementarios</p>
+          <h2>Todo lo que rodea a tu sitio, resuelto</h2>
+          <p class="bajada">Servicios que puedes sumar a cualquier nivel para que no tengas que preocuparte de nada.</p>
+        </header>
+
+        <div class="grilla grilla--4">
+          <article class="tarjeta tarjeta--mini aparecer">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
+            <h4>Dominio y hosting</h4>
+            <p>Registro .cl o .com y alojamiento del sitio.</p>
+          </article>
+          <article class="tarjeta tarjeta--mini aparecer" style="--d:.06s">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <h4>Certificado SSL</h4>
+            <p>Conexión segura (https) y confianza.</p>
+          </article>
+          <article class="tarjeta tarjeta--mini aparecer" style="--d:.12s">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            <h4>Correo corporativo</h4>
+            <p>Casillas con el dominio de tu negocio.</p>
+          </article>
+          <article class="tarjeta tarjeta--mini aparecer" style="--d:.18s">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+            <h4>SEO y Google</h4>
+            <p>Posicionamiento y ficha de Google Business.</p>
+          </article>
+          <article class="tarjeta tarjeta--mini aparecer">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.900M20 4v4.500h-4.5"/></svg>
+            <h4>Mantención mensual</h4>
+            <p>Actualizaciones, respaldos y correcciones.</p>
+          </article>
+          <article class="tarjeta tarjeta--mini aparecer" style="--d:.06s">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/></svg>
+            <h4>Soporte y capacitación</h4>
+            <p>Te enseñamos a administrar el sitio.</p>
+          </article>
+          <article class="tarjeta tarjeta--mini aparecer" style="--d:.12s">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"/></svg>
+            <h4>Analítica y reportes</h4>
+            <p>Visitas, conversiones y ventas en un panel.</p>
+          </article>
+          <article class="tarjeta tarjeta--mini aparecer" style="--d:.18s">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l1.5-3h5L16 7"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+            <h4>Contenido y fotografía</h4>
+            <p>Textos, fotos y logo para el sitio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= Proceso ======================= -->
+    <section class="seccion seccion--alt" id="proceso">
+      <div class="contenedor">
+        <header class="seccion__cab aparecer">
+          <p class="etiqueta">Cómo trabajamos</p>
+          <h2>Un proceso claro, de principio a fin</h2>
+        </header>
+
+        <ol class="pasos">
+          <li class="paso aparecer">
+            <span class="paso__num">1</span>
+            <h4>Reunión inicial</h4>
+            <p>Entendemos tu negocio, tus objetivos y el nivel que necesitas.</p>
+          </li>
+          <li class="paso aparecer" style="--d:.08s">
+            <span class="paso__num">2</span>
+            <h4>Propuesta</h4>
+            <p>Cotización con alcance, plazos y tarifas claras.</p>
+          </li>
+          <li class="paso aparecer" style="--d:.16s">
+            <span class="paso__num">3</span>
+            <h4>Diseño</h4>
+            <p>Maqueta visual con tu marca, para aprobar antes de construir.</p>
+          </li>
+          <li class="paso aparecer" style="--d:.24s">
+            <span class="paso__num">4</span>
+            <h4>Desarrollo y pruebas</h4>
+            <p>Construcción, integraciones y pruebas en celular y computador.</p>
+          </li>
+          <li class="paso aparecer" style="--d:.32s">
+            <span class="paso__num">5</span>
+            <h4>Publicación y soporte</h4>
+            <p>Puesta en línea, capacitación y mantención.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= Contacto ======================= -->
+    <section class="seccion" id="contacto">
+      <div class="contenedor contacto">
+        <div class="contacto__texto aparecer">
+          <p class="etiqueta">Contacto</p>
+          <h2>Elijamos la solución que hace crecer tu negocio</h2>
+          <p class="bajada">Cuéntanos qué necesitas y te recomendamos el camino adecuado, sin compromiso.</p>
+          <a class="contacto__correo" href="mailto:dfernandez@sistemiza.cl">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            dfernandez@sistemiza.cl
+          </a>
+        </div>
+
+        <!-- Formspree: reemplaza TU_ID_FORMSPREE por el ID de tu formulario -->
+        <form class="formulario aparecer" id="form-contacto" action="https://formspree.io/f/TU_ID_FORMSPREE" method="POST" style="--d:.1s">
+          <div class="campo">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="f-correo">Correo electrónico</label>
+            <input id="f-correo" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="campo">
+            <label for="f-empresa">Empresa <span class="opcional">(opcional)</span></label>
+            <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+          </div>
+          <div class="campo">
+            <label for="f-interes">¿Qué te interesa?</label>
+            <select id="f-interes" name="interes">
+              <option>Sitio web o tienda en línea</option>
+              <option>Desarrollo de un sistema a medida</option>
+              <option>Servicios informáticos para mi empresa</option>
+              <option>Automatización de procesos</option>
+              <option>Aún no lo sé, necesito orientación</option>
+            </select>
+          </div>
+          <div class="campo campo--ancho">
+            <label for="f-mensaje">Mensaje</label>
+            <textarea id="f-mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos brevemente sobre tu negocio y lo que necesitas."></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Nuevo contacto desde sistemiza.cl">
+          <input class="trampa" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="campo campo--ancho formulario__pie">
+            <button class="boton" type="submit" id="btn-enviar">Enviar mensaje
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="formulario__estado" id="form-estado" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= Pie ======================= -->
+  <footer class="pie">
+    <div class="contenedor pie__fila">
+      <img src="assets/img/sistemiza-lema-blanco.svg" alt="Sistemiza · Soluciones para tu negocio" width="190" height="56" loading="lazy">
+      <nav class="pie__nav" aria-label="Pie de página">
+        <a href="#servicios">Servicios</a>
+        <a href="#productos">Productos web</a>
+        <a href="#complementos">Complementos</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="contenedor pie__legal">
+      <p>© <span id="anio">2026</span> Sistemiza · sistemiza.cl</p>
+      <a href="mailto:dfernandez@sistemiza.cl">dfernandez@sistemiza.cl</a>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
