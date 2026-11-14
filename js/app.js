@@ -127,7 +127,7 @@
     });
   });
 
-  /* ---------- Formulario de contacto (Formspree) ---------- */
+  /* ---------- Formulario de contacto (Web3Forms) ---------- */
   var form = document.getElementById('form-contacto');
   var estado = document.getElementById('form-estado');
   var btnEnviar = document.getElementById('btn-enviar');
@@ -140,11 +140,6 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    if (form.action.indexOf('TU_ID_FORMSPREE') !== -1) {
-      mostrarEstado('El formulario aún no está conectado a Formspree. Escríbenos a dfernandez@sistemiza.cl.', 'error');
-      return;
-    }
-
     btnEnviar.disabled = true;
     mostrarEstado('Enviando…', '');
 
@@ -153,17 +148,13 @@
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
     }).then(function (res) {
-      if (res.ok) {
-        form.reset();
-        mostrarEstado('¡Gracias! Recibimos tu mensaje y te responderemos pronto.', 'ok');
-        return;
-      }
-      return res.json().then(function (datos) {
-        var detalle = datos && datos.errors ? datos.errors.map(function (x) { return x.message; }).join(', ') : '';
-        throw new Error(detalle);
-      });
+      return res.json();
+    }).then(function (datos) {
+      if (!datos || !datos.success) throw new Error(datos && datos.message ? datos.message : '');
+      form.reset();
+      mostrarEstado('¡Gracias! Recibimos tu mensaje y te responderemos pronto.', 'ok');
     }).catch(function () {
-      mostrarEstado('No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos a dfernandez@sistemiza.cl.', 'error');
+      mostrarEstado('No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos a contacto@sistemiza.cl.', 'error');
     }).then(function () {
       btnEnviar.disabled = false;
     });
