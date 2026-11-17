@@ -19,14 +19,16 @@
   <meta property="og:title" content="Páginas web y sistemas para pymes en Chile | Sistemiza">
   <meta property="og:description" content="Páginas web, tiendas en línea y sistemas a medida para pymes en Chile. Soporte informático y automatización de procesos.">
   <meta property="og:url" content="https://www.sistemiza.cl/">
-  <meta property="og:image" content="https://www.sistemiza.cl/assets/img/sistemiza-lema-fondo-oscuro.png">
-  <meta property="og:image:width" content="1600">
-  <meta property="og:image:height" content="473">
+  <meta property="og:image" content="https://www.sistemiza.cl/assets/img/og-sistemiza.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Sistemiza · Soluciones para tu negocio">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Páginas web y sistemas para pymes en Chile | Sistemiza">
   <meta name="twitter:description" content="Páginas web, tiendas en línea y sistemas a medida para pymes en Chile. Soporte informático y automatización de procesos.">
-  <meta name="twitter:image" content="https://www.sistemiza.cl/assets/img/sistemiza-lema-fondo-oscuro.png">
+  <meta name="twitter:image" content="https://www.sistemiza.cl/assets/img/og-sistemiza.png">
+  <meta name="twitter:image:alt" content="Sistemiza · Soluciones para tu negocio">
 
   <!-- Datos estructurados para Google -->
   <script type="application/ld+json">
@@ -42,6 +44,17 @@
         "publisher": { "@id": "https://www.sistemiza.cl/#empresa" }
       },
       {
+        "@type": "WebPage",
+        "@id": "https://www.sistemiza.cl/#pagina",
+        "url": "https://www.sistemiza.cl/",
+        "name": "Páginas web y sistemas para pymes en Chile | Sistemiza",
+        "description": "Páginas web, tiendas en línea y sistemas a medida para pymes en Chile. Soporte informático y automatización de procesos. Cotiza sin compromiso.",
+        "inLanguage": "es-CL",
+        "isPartOf": { "@id": "https://www.sistemiza.cl/#sitio" },
+        "about": { "@id": "https://www.sistemiza.cl/#empresa" },
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.sistemiza.cl/assets/img/og-sistemiza.png", "width": 1200, "height": 630 }
+      },
+      {
         "@type": "ProfessionalService",
         "@id": "https://www.sistemiza.cl/#empresa",
         "name": "Sistemiza",
@@ -49,8 +62,8 @@
         "description": "Páginas web, tiendas en línea y sistemas a medida para pymes en Chile. Servicios informáticos y automatización de procesos.",
         "url": "https://www.sistemiza.cl/",
         "email": "contacto@sistemiza.cl",
-        "logo": "https://www.sistemiza.cl/apple-touch-icon.png",
-        "image": "https://www.sistemiza.cl/assets/img/sistemiza-lema-fondo-oscuro.png",
+        "logo": { "@type": "ImageObject", "url": "https://www.sistemiza.cl/apple-touch-icon.png", "width": 180, "height": 180 },
+        "image": "https://www.sistemiza.cl/assets/img/og-sistemiza.png",
         "address": { "@type": "PostalAddress", "addressCountry": "CL" },
         "areaServed": { "@type": "Country", "name": "Chile" },
         "knowsLanguage": "es",
@@ -65,11 +78,11 @@
           "@type": "OfferCatalog",
           "name": "Servicios para pymes",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño de páginas web y landing pages para pymes", "areaServed": "CL" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tiendas en línea y catálogos con pedidos por WhatsApp", "areaServed": "CL" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desarrollo de sistemas a medida e integración con ERP", "areaServed": "CL" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servicios informáticos y soporte para pymes", "areaServed": "CL" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatización de procesos", "areaServed": "CL" } }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño de páginas web y landing pages para pymes", "description": "Landing pages informativas adaptables a celular, con dominio propio, https y botón de WhatsApp.", "areaServed": "CL" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tiendas en línea y catálogos con pedidos por WhatsApp", "description": "Catálogos con carrito y tiendas en línea con cuentas de clientes, panel de pedidos, pago en línea y facturación electrónica.", "areaServed": "CL" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desarrollo de sistemas a medida e integración con ERP", "description": "Sistemas y paneles de gestión a medida, integración con ERP como Odoo, pasarelas de pago y facturación electrónica.", "areaServed": "CL" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servicios informáticos y soporte para pymes", "description": "Dominio, hosting, correo corporativo, mantención, respaldos, seguridad, soporte y capacitación.", "areaServed": "CL" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatización de procesos", "description": "Flujos automáticos con herramientas como n8n: avisos, correos, reportes y sincronización de pedidos, stock y documentos.", "areaServed": "CL" } }
           ]
         }
       }
@@ -417,42 +430,42 @@
         <div class="grilla grilla--4">
           <article class="tarjeta tarjeta--mini aparecer">
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
-            <h4>Dominio y hosting</h4>
+            <h3>Dominio y hosting</h3>
             <p>Registro .cl o .com y alojamiento del sitio.</p>
           </article>
           <article class="tarjeta tarjeta--mini aparecer" style="--d:.06s">
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-            <h4>Certificado SSL</h4>
+            <h3>Certificado SSL</h3>
             <p>Conexión segura (https) y confianza.</p>
           </article>
           <article class="tarjeta tarjeta--mini aparecer" style="--d:.12s">
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-            <h4>Correo corporativo</h4>
+            <h3>Correo corporativo</h3>
             <p>Casillas con el dominio de tu negocio.</p>
           </article>
           <article class="tarjeta tarjeta--mini aparecer" style="--d:.18s">
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
-            <h4>SEO y Google</h4>
+            <h3>SEO y Google</h3>
             <p>Posicionamiento y ficha de Google Business.</p>
           </article>
           <article class="tarjeta tarjeta--mini aparecer">
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.6-5.900M20 4v4.500h-4.5"/></svg>
-            <h4>Mantención mensual</h4>
+            <h3>Mantención mensual</h3>
             <p>Actualizaciones, respaldos y correcciones.</p>
           </article>
           <article class="tarjeta tarjeta--mini aparecer" style="--d:.06s">
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/></svg>
-            <h4>Soporte y capacitación</h4>
+            <h3>Soporte y capacitación</h3>
             <p>Te enseñamos a administrar el sitio.</p>
           </article>
           <article class="tarjeta tarjeta--mini aparecer" style="--d:.12s">
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4M4 20h16M8 16v-4M12 16V8M16 16v-6"/></svg>
-            <h4>Analítica y reportes</h4>
+            <h3>Analítica y reportes</h3>
             <p>Visitas, conversiones y ventas en un panel.</p>
           </article>
           <article class="tarjeta tarjeta--mini aparecer" style="--d:.18s">
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l1.5-3h5L16 7"/><circle cx="12" cy="13.5" r="3.5"/></svg>
-            <h4>Contenido y fotografía</h4>
+            <h3>Contenido y fotografía</h3>
             <p>Textos, fotos y logo para el sitio.</p>
           </article>
         </div>
@@ -470,27 +483,27 @@
         <ol class="pasos">
           <li class="paso aparecer">
             <span class="paso__num">1</span>
-            <h4>Reunión inicial</h4>
+            <h3>Reunión inicial</h3>
             <p>Entendemos tu negocio, tus objetivos y el nivel que necesitas.</p>
           </li>
           <li class="paso aparecer" style="--d:.08s">
             <span class="paso__num">2</span>
-            <h4>Propuesta</h4>
+            <h3>Propuesta</h3>
             <p>Cotización con alcance, plazos y tarifas claras.</p>
           </li>
           <li class="paso aparecer" style="--d:.16s">
             <span class="paso__num">3</span>
-            <h4>Diseño</h4>
+            <h3>Diseño</h3>
             <p>Maqueta visual con tu marca, para aprobar antes de construir.</p>
           </li>
           <li class="paso aparecer" style="--d:.24s">
             <span class="paso__num">4</span>
-            <h4>Desarrollo y pruebas</h4>
+            <h3>Desarrollo y pruebas</h3>
             <p>Construcción, integraciones y pruebas en celular y computador.</p>
           </li>
           <li class="paso aparecer" style="--d:.32s">
             <span class="paso__num">5</span>
-            <h4>Publicación y soporte</h4>
+            <h3>Publicación y soporte</h3>
             <p>Puesta en línea, capacitación y mantención.</p>
           </li>
         </ol>

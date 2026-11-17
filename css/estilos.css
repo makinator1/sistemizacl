@@ -80,7 +80,7 @@ h1, h2, h3, h4 { font-family: var(--fuente-titulos); color: var(--titulo); lette
 h1 { font-size: 48px; line-height: 1.1; font-weight: 700; }
 h2 { font-size: 36px; line-height: 1.15; font-weight: 600; }
 h3 { font-size: 24px; line-height: 1.25; font-weight: 600; }
-h4 { font-size: 18px; line-height: 1.3; font-weight: 600; }
+h4, .tarjeta--mini h3, .paso h3 { font-size: 18px; line-height: 1.3; font-weight: 600; }
 p { margin: 0; }
 a { color: var(--enlace); }
 img { max-width: 100%; height: auto; display: block; }
@@ -377,7 +377,7 @@ td.txt { color: var(--texto); font-size: 14px; font-weight: 500; }
   .pasos::before { left: 24px; right: auto; top: 10px; bottom: 60px; width: 2px; height: auto; background: linear-gradient(180deg, var(--indigo), var(--cian)); }
   .paso { grid-template-columns: 50px 1fr; column-gap: 18px; padding-bottom: 28px; }
   .paso__num { grid-row: 1 / span 2; margin: 0; }
-  .paso h4 { align-self: end; }
+  .paso h3 { align-self: end; }
 }
 
 @media (max-width: 860px) {
